@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:backgroundTint="@color/peach_puff"
+        android:fontFamily="@font/abril_fatface"
+        android:padding="20dp"
+        android:text="@string/start_quiz"
+        android:textColor="@color/dark_green"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.72"
+        app:strokeColor="@color/red"
+        app:strokeWidth="3dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.26">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/forest_green"
+            android:fontFamily="@font/abril_fatface"
+            android:gravity="center"
+            android:padding="20dp"
+            android:text="@string/welcome_quiz_app"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/rulesButton"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/dark_violet"
+        android:fontFamily="@font/abril_fatface"
+        android:padding="10dp"
+        android:text="@string/rules"
+        android:textColor="@color/deep_sky_blue"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="VisualLintOverlap" />
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

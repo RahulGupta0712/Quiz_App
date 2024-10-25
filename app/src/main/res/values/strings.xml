@@ -25,4 +25,24 @@
     <string name="leave_quiz">Leave Quiz ?</string>
     <string name="exited_the_quiz">Exited the Quiz</string>
     <string name="no_options_selected">No Options selected</string>
+    <string name="finish">Finish</string>
+    <string name="sign_in_here">\ Sign in here</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="enter_your_email_address_to_get_the_password_reset_link">Enter your email address to get the password reset link.</string>
+    <string name="email_address">Email Address</string>
+    <string name="sample_email">hello@example.com</string>
+    <string name="password_reset">Password Reset</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="login">Login</string>
+    <string name="welcome_back_to_the_app">Welcome back to the app</string>
+    <string name="password">Password</string>
+    <string name="sample_password">••••••••••••••••••••</string>
+    <string name="welcome_to_the_app">Welcome to the Quiz app</string>
+    <string name="message">Congratulations\nLogin Successful</string>
+    <string name="logout">Logout</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="success_message_">We\'ve sent you a verification email, please check your inbox and follow the instructions to verify your account.\n\nThank you for signing up with us!</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="web_client_id">666562301436-ev0ttfbmpme434d88u7tcvu1e29fvpb4.apps.googleusercontent.com</string>
 </resources>

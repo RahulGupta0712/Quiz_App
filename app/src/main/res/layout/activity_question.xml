@@ -8,6 +8,16 @@
     android:background="@drawable/questions_background"
     tools:context=".QuestionActivity">
 
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/timer"
         android:layout_width="100dp"
@@ -49,111 +59,124 @@
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView5"
-        android:layout_width="0dp"
+    <LinearLayout
+        android:id="@+id/optionAB"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="5dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="5dp"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView2"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:background="@color/float_transparent"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView3">
 
-        <TextView
-            android:id="@+id/optionA"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView5"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_margin="5dp"
 
-            android:background="@color/dark_blue"
-            android:fontFamily="serif"
-            android:gravity="start|center_vertical"
-            android:padding="10dp"
-            android:textColor="@color/yellow"
-            android:textSize="16sp" />
-    </androidx.cardview.widget.CardView>
+            android:layout_weight="1"
+            app:cardCornerRadius="15dp"
+            >
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="0dp"
+            <TextView
+                android:id="@+id/optionA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blue"
+                android:fontFamily="serif"
+                android:gravity="start|center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/yellow"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/optionB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@color/dark_blue"
+                android:fontFamily="serif"
+                android:gravity="start|center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/yellow"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/optionCD"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginEnd="10dp"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cardView5"
-        app:layout_constraintTop_toTopOf="@+id/cardView5">
-
-        <TextView
-            android:id="@+id/optionB"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-
-            android:background="@color/dark_blue"
-            android:fontFamily="serif"
-            android:gravity="start|center_vertical"
-            android:padding="10dp"
-            android:textColor="@color/yellow"
-            android:textSize="16sp" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
+        android:background="@color/float_transparent"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="5dp"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/cardView6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView5">
-
-        <TextView
-            android:id="@+id/optionC"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/dark_blue"
-            android:fontFamily="serif"
-            android:gravity="start|center_vertical"
-            android:padding="10dp"
-            android:textColor="@color/yellow"
-            android:textSize="16sp" />
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="10dp"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cardView4"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/cardView4"
-        app:layout_constraintTop_toTopOf="@+id/cardView4">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/optionAB">
 
-        <TextView
-            android:id="@+id/optionD"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/dark_blue"
-            android:fontFamily="serif"
-            android:gravity="start|center_vertical"
-            android:padding="10dp"
-            android:textColor="@color/yellow"
-            android:textSize="16sp" />
-    </androidx.cardview.widget.CardView>
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/optionC"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blue"
+                android:fontFamily="serif"
+                android:gravity="start|center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/yellow"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="15dp"
+            >
+
+            <TextView
+                android:id="@+id/optionD"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_blue"
+                android:fontFamily="serif"
+                android:gravity="start|center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/yellow"
+                android:textSize="16sp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
 
     <Button
         android:id="@+id/nextQuestionButton"
@@ -169,16 +192,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView4"
+        app:layout_constraintTop_toBottomOf="@+id/optionCD"
         app:strokeColor="@color/main_green_color"
         app:strokeWidth="5dp" />
-
-    <androidx.constraintlayout.widget.Group
-        android:id="@+id/group2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        app:constraint_referenced_ids="timer,cardView3,cardView5,cardView2,cardView4,cardView6,nextQuestionButton" />
 
     <ImageButton
         android:id="@+id/exitQuizButton"
@@ -187,11 +203,16 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:background="@color/float_transparent"
+        android:contentDescription="@string/exit_quiz"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/exit_button"
-        android:contentDescription="@string/exit_quiz"
-        />
+        app:srcCompat="@drawable/exit_button" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="timer,cardView3,optionAB,optionCD,nextQuestionButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,9 +15,10 @@ import render.animations.Zoom
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
-    private val binding by lazy{
+    private val binding by lazy {
         ActivitySplashScreenBinding.inflate(layoutInflater)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -34,7 +35,7 @@ class SplashScreenActivity : AppCompatActivity() {
         anim.start()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, MainActivity::class.java))
+            startActivity(Intent(this, AuthenticationScreen::class.java))
             finish()
         }, 1000)
     }

@@ -20,7 +20,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/score_msg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/red"

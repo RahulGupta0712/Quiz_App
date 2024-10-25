@@ -6,12 +6,16 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import cn.pedant.SweetAlert.SweetAlertDialog
 import com.example.quizapp.databinding.ActivityMainBinding
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.FirebaseDatabase
+import com.shashank.sony.fancytoastlib.FancyToast
 import render.animations.Render
 import render.animations.Zoom
 
 class MainActivity : AppCompatActivity() {
-    private val binding by lazy{
+    private val binding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
 
@@ -19,40 +23,35 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(binding.root)
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.mainFrame, FragmentHome())
+        transaction.commit()
 
-        val list = ArrayList((0..547).shuffled().take(10)) // take 10 random indexes for showing the questions from database (our database contains 548 questions)
+        binding.bottomBar.onItemSelected = {
+            when (it) {
+                0 -> {
+                    val fragment = FragmentHome()
+                    val trans = supportFragmentManager.beginTransaction()
+                    trans.replace(R.id.mainFrame, fragment)
+                    trans.commit()
+                }
 
-        binding.startButton.setOnClickListener{
-            val intent = Intent(this@MainActivity, QuestionActivity::class.java)
-            intent.putIntegerArrayListExtra("indexes", list)
-            intent.putExtra("pos", 0)
-            intent.putExtra("score", 0)
-            startActivity(intent)
-            finish()
-        }
-
-        binding.rulesButton.setOnClickListener{
-            val currentFragmentCount = supportFragmentManager.backStackEntryCount
-            if(currentFragmentCount == 0) {
-                // means Rules is not opened currently
-                // so start RulesFragment
-                val trans = supportFragmentManager.beginTransaction()
-                trans.replace(R.id.frame, RulesFragment())
-                trans.addToBackStack(null)
-                trans.commit()
-
-                // set the animation
-                val render = Render(this)
-                render.setAnimation(Zoom().In(binding.frame))
-                render.setDuration(500)
-                render.start()
+                1 -> {
+                    val fragment = FragmentLeaderboard()
+                    val trans = supportFragmentManager.beginTransaction()
+                    trans.replace(R.id.mainFrame, fragment)
+                    trans.commit()
+                }
             }
         }
+
+
     }
 }

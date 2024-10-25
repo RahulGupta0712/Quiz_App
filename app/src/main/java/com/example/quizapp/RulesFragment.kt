@@ -14,10 +14,11 @@ import render.animations.Zoom
 
 
 class RulesFragment : Fragment() {
-    private lateinit var binding:FragmentRulesBinding
+    private lateinit var binding: FragmentRulesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,7 +31,7 @@ class RulesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.closeButton.setOnClickListener{
+        binding.closeButton.setOnClickListener {
             // set animation while closing RulesFragment
             val render = Render(requireContext())
             render.setAnimation(Zoom().Out(binding.root))

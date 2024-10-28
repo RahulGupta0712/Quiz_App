@@ -42,7 +42,7 @@ class FragmentHome : Fragment() {
         user?.let {
             // show user's name
             databaseRef.child("users").child(user.uid).child("name").get().addOnSuccessListener {
-                binding.name.text = it.getValue(String::class.java)
+                binding.name.text = "Hi, " + it.getValue(String::class.java)
             }
         }
 

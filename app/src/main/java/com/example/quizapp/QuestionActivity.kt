@@ -1,5 +1,6 @@
 package com.example.quizapp
 
+import android.animation.ObjectAnimator
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
@@ -37,11 +38,11 @@ class QuestionActivity : AppCompatActivity() {
 
     private lateinit var questionIndices: ArrayList<Int>
 
-    private val defaultBackgroundColor = R.color.dark_blue
-    private val defaultTextColor = R.color.yellow
+    private val defaultBackgroundColor = R.color.blue
+    private val defaultTextColor = R.color.white
 
-    private val selectedBackgroundColor = R.color.yellow
-    private val selectedTextColor = R.color.black
+    private val selectedBackgroundColor = R.color.white
+    private val selectedTextColor = R.color.blue
 
     private var questionNo = 0
     private var score = 0
@@ -187,6 +188,10 @@ class QuestionActivity : AppCompatActivity() {
     }
 
     private fun showQuestion() {
+        ObjectAnimator.ofInt(binding.progressBar, "progress", (questionNo+1)*10)
+            .setDuration(300)
+            .start()
+
         // display question and options and save correct option and marked option
         binding.group2.isVisible = false
         binding.progressBar2.isVisible = true
@@ -237,26 +242,6 @@ class QuestionActivity : AppCompatActivity() {
                         // start the timer
                         timer.start()
                         isTimerFinished = false
-
-                        // make height of all options equal
-//                    var maxHeight = 0
-//                    val viewTreeObserver = binding.root.viewTreeObserver
-//                    viewTreeObserver.addOnGlobalLayoutListener(object :
-//                        ViewTreeObserver.OnGlobalLayoutListener {
-//                        override fun onGlobalLayout() {
-//                            maxHeight = max(maxHeight, binding.optionA.height)
-//                            maxHeight = max(maxHeight, binding.optionB.height)
-//                            maxHeight = max(maxHeight, binding.optionC.height)
-//                            maxHeight = max(maxHeight, binding.optionD.height)
-//
-//                            binding.optionA.height = maxHeight
-//                            binding.optionB.height = maxHeight
-//                            binding.optionC.height = maxHeight
-//                            binding.optionD.height = maxHeight
-//
-//                            binding.root.viewTreeObserver.removeOnGlobalLayoutListener(this)    // free the resource
-//                        }
-//                    })
                     }
                 }
 

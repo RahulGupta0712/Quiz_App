@@ -31,10 +31,10 @@
     <string name="enter_your_email_address_to_get_the_password_reset_link">Enter your email address to get the password reset link.</string>
     <string name="email_address">Email Address</string>
     <string name="sample_email">hello@example.com</string>
-    <string name="password_reset">Password Reset</string>
+    <string name="password_reset">Reset Password</string>
     <string name="create_an_account">Create an account</string>
     <string name="login">Login</string>
-    <string name="welcome_back_to_the_app">Welcome back to the app</string>
+    <string name="welcome_back_to_the_app">Welcome back to the Quiz app</string>
     <string name="password">Password</string>
     <string name="sample_password">••••••••••••••••••••</string>
     <string name="welcome_to_the_app">Welcome to the Quiz app</string>

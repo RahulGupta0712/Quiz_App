@@ -11,99 +11,101 @@
         android:id="@+id/startButton"
         android:layout_width="170dp"
         android:layout_height="80dp"
-        android:backgroundTint="@color/peach_puff"
+        android:backgroundTint="@color/blue"
         android:fontFamily="@font/abril_fatface"
         android:padding="20dp"
         android:text="@string/start_quiz"
-        android:textColor="@color/dark_green"
+        android:textColor="@color/ghost_white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rulesButton"
-        app:strokeColor="@color/red"
+        app:strokeColor="@color/antique_white"
         app:strokeWidth="3dp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:cardCornerRadius="20dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        app:layout_constraintVertical_bias="0.26">
 
         <TextView
             android:id="@+id/welcome_app"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/forest_green"
+            android:background="@color/blue"
             android:fontFamily="@font/abril_fatface"
             android:gravity="center"
             android:padding="20dp"
             android:text="@string/welcome_quiz_app"
             android:textAllCaps="true"
-            android:textColor="@color/black"
+            android:textColor="@color/floral_white"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/rulesButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
         android:layout_width="120dp"
         android:layout_height="70dp"
         android:layout_marginTop="80dp"
-        android:backgroundTint="@color/dark_violet"
+        android:backgroundTint="@color/white_smoke"
         android:fontFamily="@font/abril_fatface"
         android:padding="10dp"
         android:text="@string/rules"
-        android:textColor="@color/deep_sky_blue"
+        android:textColor="@color/blue"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
         tools:ignore="VisualLintOverlap" />
 
     <FrameLayout
         android:id="@+id/frame"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintBottom_toTopOf="@+id/startButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.0"
-        android:layout_width="0dp"
-        android:layout_height="320dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp">
+        app:layout_constraintVertical_bias="0.0">
 
     </FrameLayout>
 
     <ImageButton
         android:id="@+id/logoutButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logout"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:background="@color/float_transparent"
-        android:scaleType="fitCenter" />
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logout" />
 
     <TextView
         android:id="@+id/name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/logoutButton"
-        app:layout_constraintTop_toBottomOf="@+id/logoutButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
         android:layout_marginEnd="10dp"
-        android:gravity="center"
-        android:text="Name"
-        android:textColor="@color/yellow"
-        android:textSize="20sp" />
+        android:fontFamily="@font/abril_fatface"
+        android:gravity="start"
+        android:textColor="@color/floral_white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="@+id/logoutButton"
+        app:layout_constraintEnd_toStartOf="@+id/logoutButton"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/logoutButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

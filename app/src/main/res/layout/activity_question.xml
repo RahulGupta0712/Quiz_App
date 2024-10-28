@@ -9,6 +9,21 @@
     tools:context=".QuestionActivity">
 
     <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:progress="10"
+        android:progressTint="@color/blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
         android:id="@+id/progressBar2"
         style="?android:attr/progressBarStyle"
         android:layout_width="100dp"
@@ -28,7 +43,7 @@
         android:gravity="center"
         android:padding="10dp"
         android:text="@string/_30"
-        android:textColor="@color/dark_blue"
+        android:textColor="@color/blue"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,11 +66,11 @@
             android:id="@+id/question"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/dark_blue"
+            android:background="@color/floral_white"
             android:fontFamily="serif"
             android:gravity="center"
             android:padding="10dp"
-            android:textColor="@color/greenYellow"
+            android:textColor="@color/blue"
             android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
@@ -86,11 +101,11 @@
                 android:id="@+id/optionA"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark_blue"
+                android:background="@color/blue"
                 android:fontFamily="serif"
                 android:gravity="start|center_vertical"
                 android:padding="10dp"
-                android:textColor="@color/yellow"
+                android:textColor="@color/antique_white"
                 android:textSize="16sp" />
         </androidx.cardview.widget.CardView>
 
@@ -108,11 +123,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
 
-                android:background="@color/dark_blue"
+                android:background="@color/blue"
                 android:fontFamily="serif"
                 android:gravity="start|center_vertical"
                 android:padding="10dp"
-                android:textColor="@color/yellow"
+                android:textColor="@color/antique_white"
                 android:textSize="16sp" />
         </androidx.cardview.widget.CardView>
 
@@ -145,11 +160,11 @@
                 android:id="@+id/optionC"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark_blue"
+                android:background="@color/blue"
                 android:fontFamily="serif"
                 android:gravity="start|center_vertical"
                 android:padding="10dp"
-                android:textColor="@color/yellow"
+                android:textColor="@color/antique_white"
                 android:textSize="16sp" />
         </androidx.cardview.widget.CardView>
 
@@ -166,11 +181,11 @@
                 android:id="@+id/optionD"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/dark_blue"
+                android:background="@color/blue"
                 android:fontFamily="serif"
                 android:gravity="start|center_vertical"
                 android:padding="10dp"
-                android:textColor="@color/yellow"
+                android:textColor="@color/antique_white"
                 android:textSize="16sp" />
         </androidx.cardview.widget.CardView>
 
@@ -182,7 +197,7 @@
         android:id="@+id/nextQuestionButton"
         android:layout_width="170dp"
         android:layout_height="70dp"
-        android:backgroundTint="@color/orchid"
+        android:backgroundTint="@color/white"
         android:fontFamily="@font/abril_fatface"
         android:padding="10dp"
         android:text="@string/next_question"
@@ -193,7 +208,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionCD"
-        app:strokeColor="@color/main_green_color"
+        app:strokeColor="@color/blue"
         app:strokeWidth="5dp" />
 
     <ImageButton
@@ -206,7 +221,7 @@
         android:contentDescription="@string/exit_quiz"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar"
         app:srcCompat="@drawable/exit_button" />
 
     <androidx.constraintlayout.widget.Group

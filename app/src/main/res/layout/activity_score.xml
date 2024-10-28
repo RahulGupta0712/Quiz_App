@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/wheat"
+    android:background="@color/ghost_white"
     tools:context=".ScoreActivity">
 
     <androidx.cardview.widget.CardView
@@ -23,11 +23,11 @@
             android:id="@+id/score_msg"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/red"
+            android:background="@color/blue"
             android:fontFamily="@font/abril_fatface"
             android:padding="10dp"
             android:text="@string/your_score_is"
-            android:textColor="@color/dark_blue"
+            android:textColor="@color/floral_white"
             android:textSize="40sp" />
     </androidx.cardview.widget.CardView>
 
@@ -46,12 +46,12 @@
             android:id="@+id/showScore"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/black"
+            android:background="@color/white_smoke"
             android:fontFamily="@font/abril_fatface"
             android:gravity="center"
             android:padding="20dp"
             android:text="@string/score"
-            android:textColor="@color/misty_rose"
+            android:textColor="@color/blue"
             android:textSize="40sp" />
     </androidx.cardview.widget.CardView>
 
@@ -59,16 +59,16 @@
         android:id="@+id/goToHomeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange"
+        android:backgroundTint="@color/blue"
         android:fontFamily="@font/abril_fatface"
         android:padding="20dp"
         android:text="@string/go_to_home"
-        android:textColor="@color/fire_brick"
+        android:textColor="@color/floral_white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView8"
-        app:strokeColor="@color/purple"
+        app:strokeColor="@color/antique_white"
         app:strokeWidth="3dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

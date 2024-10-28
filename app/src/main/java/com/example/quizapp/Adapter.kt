@@ -23,7 +23,7 @@ class Adapter(var context: Context, var datalist: ArrayList<DataModel>) :
     }
 
     override fun onBindViewHolder(holder: myViewHolder, position: Int) {
-        holder.binding.name.text = datalist[position].name
+        holder.binding.name.text = "${position + 1}. ${datalist[position].name}"
         holder.binding.score.text = datalist[position].score.toString()
     }
 

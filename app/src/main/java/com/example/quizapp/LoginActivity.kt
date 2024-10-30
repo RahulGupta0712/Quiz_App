@@ -179,38 +179,40 @@ class LoginActivity : AppCompatActivity() {
                                                 // New user, set initial properties
                                                 val dialogBinding =
                                                     SetNameDialogBinding.inflate(layoutInflater)
-                                                AlertDialog.Builder(this@LoginActivity)
-                                                    .setTitle("Set Name")
+
+                                                val dialog = AlertDialog.Builder(this@LoginActivity)
                                                     .setView(dialogBinding.root)
-                                                    .setPositiveButton("Save") { dia, which ->
-                                                        val name =
-                                                            dialogBinding.nameEditText2.text.toString()
-                                                        if (name.isEmpty()) {
-                                                            FancyToast.makeText(
-                                                                this@LoginActivity,
-                                                                "Empty name",
-                                                                FancyToast.LENGTH_SHORT,
-                                                                FancyToast.ERROR,
-                                                                false
-                                                            ).show()
-                                                            return@setPositiveButton // exit this dialog code below so that dialog is not dismissed with name being empty
-                                                        } else {
-                                                            databaseReference.child("users")
-                                                                .child(user.uid)
-                                                                .setValue(DataModel(name, 0))
-                                                            dia.dismiss()
-                                                            startActivity(
-                                                                Intent(
-                                                                    this@LoginActivity,
-                                                                    MainActivity::class.java
-                                                                )
-                                                            )
-                                                            finish()
-                                                        }
-                                                    }
                                                     .setCancelable(false)
                                                     .create()
-                                                    .show()
+                                                dialog.show()
+
+                                                dialogBinding.saveButton.setOnClickListener {
+                                                    val name =
+                                                        dialogBinding.nameEditText2.text.toString()
+                                                    if (name.isEmpty()) {
+                                                        FancyToast.makeText(
+                                                            this@LoginActivity,
+                                                            "Empty name",
+                                                            FancyToast.LENGTH_SHORT,
+                                                            FancyToast.ERROR,
+                                                            false
+                                                        ).show()
+                                                    } else {
+                                                        databaseReference.child("users")
+                                                            .child(user.uid)
+                                                            .setValue(DataModel(name, 0))
+                                                        dialog.dismiss()
+                                                        startActivity(
+                                                            Intent(
+                                                                this@LoginActivity,
+                                                                MainActivity::class.java
+                                                            )
+                                                        )
+                                                        finish()
+                                                    }
+                                                }
+
+
                                             } else {
                                                 startActivity(
                                                     Intent(

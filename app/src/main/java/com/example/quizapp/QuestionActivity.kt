@@ -176,7 +176,7 @@ class QuestionActivity : AppCompatActivity() {
                             startActivity(intent)
                             finish()
                         }
-                    }, 200)
+                    }, 500)
                 }
             }
 
@@ -188,7 +188,7 @@ class QuestionActivity : AppCompatActivity() {
     }
 
     private fun showQuestion() {
-        ObjectAnimator.ofInt(binding.progressBar, "progress", (questionNo+1)*10)
+        ObjectAnimator.ofInt(binding.progressBar, "progress", (questionNo + 1) * 10)
             .setDuration(300)
             .start()
 

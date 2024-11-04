@@ -37,7 +37,7 @@ This Quiz Application is a dynamic platform designed to test users' knowledge ac
 3. **Login**: Users log in with either email and password or Google. After initial login, they remain signed in.
 4. **Quiz Start**: Users can begin a quiz, answering each question within 30 seconds or choosing to exit anytime.
 5. **Answer Feedback**: After each question, feedback is provided using colored indicators for correct or incorrect answers.
-6. **Quiz Completion**: At the end of the 10 questions, or upon exit, the user’s score is displayed.
+6. **Quiz Completion**: At the end of the 10 questions, the user’s score is displayed.
 7. **Leaderboard Access**: Users can view the leaderboard, where scores are ranked by highest score.
 8. **Logout**: Users can sign out of the app whenever they wish.
 
